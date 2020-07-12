@@ -89,11 +89,28 @@ lblStatus.pack(side = TOP)
 mainFrame = Frame(root, width = 330, height = 330, bg = "black")
 mainFrame.place(x = 10, y = 42)
  
-for rw in range(0, 3) :
-    for col in range(0, 3) :
-        grid[rw][col] =  Button(mainFrame, text=" ", relief = 'solid',command = lambda: markSpace(rw,col))
-        grid[rw][col].config(font = "monospace 36 bold", fg = 'red', height = 1,  width = 3)
-        grid[rw][col].place(x = rw*105 + 10, y=col*105+10)
+for rw in range(0, 3):
+   for col in range(0, 3):
+    if 3 * rw + col == 0:
+      grid[rw][col] = Button(mainFrame, text=" ", relief="solid", command=lambda: markSpace(0, 0))
+    elif 3 * rw + col == 1:
+      grid[rw][col] = Button(mainFrame, text=" ", relief="solid", command=lambda: markSpace(0, 1))
+    elif 3 * rw + col == 2:
+      grid[rw][col] = Button(mainFrame, text=" ", relief="solid", command=lambda: markSpace(0, 2))
+    elif 3 * rw + col == 3:
+      grid[rw][col] = Button(mainFrame, text=" ", relief="solid", command=lambda: markSpace(1, 0))
+    elif 3 * rw + col == 4:
+      grid[rw][col] = Button(mainFrame, text=" ", relief="solid", command=lambda: markSpace(1, 1))
+    elif 3 * rw + col == 5:
+      grid[rw][col] = Button(mainFrame, text=" ", relief="solid", command=lambda: markSpace(1, 2))
+    elif 3 * rw + col == 6:
+      grid[rw][col] = Button(mainFrame, text=" ", relief="solid", command=lambda: markSpace(2, 0))
+    elif 3 * rw + col == 7:
+      grid[rw][col] = Button(mainFrame, text=" ", relief="solid", command=lambda: markSpace(2, 1))
+    elif 3 * rw + col == 8:
+      grid[rw][col] = Button(mainFrame, text=" ", relief="solid", command=lambda: markSpace(2, 2))
+    grid[rw][col].config(font="monospace 36 bold", fg="red", height=1, width=3)
+    grid[rw][col].place(x=rw * 105 + 10, y=col * 105 + 10)
  
 btnRestart = Button(root, text = "Restart", width = 30, command = resetGame)
 btnRestart.place(x = 45,y = 380)
@@ -102,6 +119,15 @@ btnRestart.place(x = 45,y = 380)
 root.mainloop()
  
  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
  
  
  
