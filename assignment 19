@@ -1,0 +1,21 @@
+class Circle:
+    def __init__(self, radius):
+        self.radius = radius
+        self.diameter = diameter(radius)
+        self.area = area(radius)
+    def setRadius(self, radius):
+        radius = self.radius
+        return radius
+    def area(self, radius):
+        self.area = (radius * radius) * 3.14
+        return self.area
+    def diameter (self, radius):
+        self.diameter = radius * radius
+        return self.diameter
+    def circumference (self, diameter):
+        self.circumference = (3.14 * diameter)
+        return self.circumference
+    def __str__ (self, circumference):
+        self.s1 = str(circumference)
+        return self.s1
+c1 = Circle(5)
